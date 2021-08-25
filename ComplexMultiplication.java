@@ -1,6 +1,6 @@
 public class ComplexMultiplication {
 
-    public String[] lista;
+    public String[] lista = new String[2];
     public int a;
     public int b;
     public String[] complexInArray1;
@@ -26,6 +26,15 @@ public class ComplexMultiplication {
     public String[] separarParteRealDeParteCompleja(String numeroComplejo){
         if(numeroComplejo.contains("+"))
             lista=numeroComplejo.split("\\+",2);
+        else    
+            if (numeroComplejo.contains("i")){
+                lista[0]="0";
+                lista[1]=numeroComplejo;
+            }
+            else{
+                lista[0]=numeroComplejo;
+                lista[1]="0";
+            }    
         return lista;
     }
 }
