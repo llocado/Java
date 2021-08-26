@@ -10,16 +10,10 @@ public class ComplexMultiplication {
         ComplexMultiplication complex = new ComplexMultiplication();
         complexInArray1=complex.separarParteRealDeParteCompleja(cNumber1);
         complexInArray2=complex.separarParteRealDeParteCompleja(cNumber2);
-        for (String i : complexInArray1)
-            for (String j : complexInArray2)
-                if (i.contains("i")&&j.contains("i"))
-                    a=a-Integer.parseInt(i.substring(0, 1))*Integer.parseInt(j.substring(0, 1));
-                else if (i.contains("i") && !j.contains("i"))
-                    b=b+Integer.parseInt(i.substring(0,1))*Integer.parseInt(j);
-                else if (!i.contains("i") && j.contains("i"))
-                    b=b+Integer.parseInt(j.substring(0,1))*Integer.parseInt(i);
-                else
-                    a=a+Integer.parseInt(i)*Integer.parseInt(j);          
+
+        a=complex.parteReal(complexInArray1)*complex.parteReal(complexInArray2)-complex.parteCompleja(complexInArray1)*complex.parteCompleja(complexInArray2);
+        b=complex.parteReal(complexInArray1)*complex.parteCompleja(complexInArray2)+complex.parteReal(complexInArray2)*complex.parteCompleja(complexInArray1);
+        
         System.out.println("El resultado es: "+a+"+"+b+"i");
     }
     
@@ -36,5 +30,14 @@ public class ComplexMultiplication {
                 lista[1]="0";
             }    
         return lista;
+    }
+
+    public int parteReal(String[] numeroComplejo){
+        return Integer.parseInt(numeroComplejo[0]);
+    }
+
+    public int parteCompleja(String[] numeroComplejo){
+        return Integer.parseInt(numeroComplejo[1].substring(0, numeroComplejo[1].indexOf("i")));
+
     }
 }
