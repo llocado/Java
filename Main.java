@@ -1,17 +1,14 @@
-
+import java.util.ArrayList;
 
 public class Main{
     
     public static void main(String[] args){
-        RangeAddition2 x = new RangeAddition2(5, 5);
-        System.out.println(x.matriz[1][1]);
-        x.addValueOps(3,4);
-        x.addValueOps(2,5);
-        x.addValueOps(3,3);
-        x.addValueOps(2,2);
-        x.addValueOps(5,3);
-        x.printMatrix();
-        
-        x.findMaxValue();
+        Integer[] alturas={10,4,3,7,4,9,10};
+        ArrayList<Integer> lista= new ArrayList<>();
+        for(int i=0;i<alturas.length;i++){
+            lista.add(i,alturas[i]);
+        }
+        ContainerWithMostWater x = new ContainerWithMostWater();
+            x.containerWithMostWater(lista);
     }
 }    
