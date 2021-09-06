@@ -1,14 +1,28 @@
 import java.util.ArrayList;
+import java.util.List;
 
 public class Main{
-    
     public static void main(String[] args){
-        Integer[] alturas={10,4,3,7,4,9,10};
-        ArrayList<Integer> lista= new ArrayList<>();
-        for(int i=0;i<alturas.length;i++){
-            lista.add(i,alturas[i]);
-        }
-        ContainerWithMostWater x = new ContainerWithMostWater();
-            x.containerWithMostWater(lista);
+
+        ArrayList<ArrayList<String>> lista2=new ArrayList<ArrayList<String>>();
+
+        ArrayList<String> subLista =new ArrayList<String>();
+        System.out.println(subLista.isEmpty());
+        subLista.add("HOLA");
+        subLista.add("COMO");
+        subLista.add("ESTAS");
+
+        lista2.add(subLista);
+
+        System.out.println(lista2);
+
+        lista2.add(subLista);
+
+        System.out.println(lista2);
+
+        System.out.println(lista2.get(0).add("de nuevo"));
+
+        System.out.println(lista2);
+
     }
 }    
