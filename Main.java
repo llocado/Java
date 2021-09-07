@@ -5,7 +5,9 @@ public class Main{
 
         LetterCombinationsOfPhoneNumber x = new LetterCombinationsOfPhoneNumber();
 
-        x.letterCombinations("123");
+        List<String> hola = x.letterCombinations("4652");
+
+        System.out.println(hola);
 
     }
 }    
