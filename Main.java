@@ -3,11 +3,12 @@ import java.util.List;
 public class Main{
     public static void main(String[] args){
 
-        LetterCombinationsOfPhoneNumber x = new LetterCombinationsOfPhoneNumber();
+        FourSum x =new FourSum();
+        Integer[] lista = {-4,-3,-2,2,3,4};
 
-        List<String> hola = x.letterCombinations("4652");
+        
 
-        System.out.println(hola);
+        System.out.println(x.fourSum(lista)); 
 
     }
 }    
