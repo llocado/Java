@@ -1,13 +1,11 @@
-import java.util.List;
-
 public class Main{
     public static void main(String[] args){
 
-        LetterCombinationsOfPhoneNumber x = new LetterCombinationsOfPhoneNumber();
+        SearchInsertPosition x = new SearchInsertPosition();
 
-        List<String> hola = x.letterCombinations("4652");
+        int[] list = {1,2,3,4,5,6,7,8,9,10,11,12,13,14,16,17,18,19,20};
 
-        System.out.println(hola);
+        System.out.println(x.searchInsertPosition(list, 15));
 
     }
 }    
